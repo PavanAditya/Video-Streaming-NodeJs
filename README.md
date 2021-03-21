@@ -16,12 +16,10 @@
 `- When a request is made, we get the file size and send the first few chunks of the video in the else statement.`
 <br />
 
-`- When we start watching the video (by accessing the route via localhost:3000/video or from the front end), subsequent requests are made,`
-`  this time with the range in the header so that we know the starting point of our next chunk.`
+`- When we start watching the video (by accessing the route via localhost:3000/video or from the front end), subsequent requests are made, this time with the range in the header so that we know the starting point of our next chunk.`
 <br />
 
-`- Read the file again to create another stream, passing along the new value for the start and the end`
-`  (which will most likely be the current part that came in the request header and the file size of the video).`
+`- Read the file again to create another stream, passing along the new value for the start and the end (which will most likely be the current part that came in the request header and the file size of the video).`
 <br />
 
 `- We set our 206 header response to send only part of our newly made stream by applying the formula we talked about earlier.`
