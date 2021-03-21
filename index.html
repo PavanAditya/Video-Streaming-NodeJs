@@ -7,4 +7,10 @@
       <source src="/video" type="video/mp4">
     </video>
   </body>
+  <script>
+    const video = document.getElementById('videoPlayer');
+    video.onseeking = (event) => {
+      console.log(event);
+    }
+  </script>
 </html>
